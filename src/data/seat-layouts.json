@@ -1,0 +1,21 @@
+{
+  "seatLayouts": {
+    "whoosh": { "patterns": ["SS_SSS"], "letters": ["AB_CDF"], "rows": 12 },
+    "kai": { "patterns": ["SS_SS"], "letters": ["AB_CD"], "rows": 10 },
+    "bus": { "patterns": ["SS_SS"], "letters": ["AB_CD"], "rows": 11 },
+    "travel": { "patterns": ["XS", "SSS", "SSS"], "letters": ["AB", "ABC", "ABC"], "rows": 3 }
+  },
+  "occupied": {
+    "G1234": ["2A", "7C"],
+    "G1238": ["1F", "4D", "9C"],
+    "G1242": ["1A", "1C", "2B", "3D", "5B", "5F"],
+    "G1246": ["6A", "6B"],
+    "G1250": ["3F", "8A", "8B"],
+    "papandayan-1002": ["3A", "3B", "5D"],
+    "comuter-1050": ["2C", "7A"],
+    "cikuray-1315": ["1B", "2A", "2C", "3D", "4B"],
+    "comuter-pdl-1005": ["4A", "4B"],
+    "damri-1445": ["5C", "8D"],
+    "shuttle-1640": ["2B"]
+  }
+}

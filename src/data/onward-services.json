@@ -1,0 +1,16 @@
+{
+  "hubs": {
+    "BDG": [
+      { "serviceKey": "travel-bdg-0840", "name": "Travel Bandung-Garut (door to door)", "mode": "Travel", "provider": "travel", "operator": "Travel Partner", "to": "GARKOTA", "toLabel": "Garut Kota", "doorToDoor": true, "class": "comfort", "departure": "08:40", "arrival": "10:40", "price": 85000, "bufferMin": 15 },
+      { "serviceKey": "papandayan-1002", "name": "KA Papandayan (Eksekutif)", "mode": "KA Papandayan", "provider": "kai", "operator": "KAI", "to": "GRT", "toLabel": "Stasiun Garut", "class": "executive", "departure": "10:02", "arrival": "11:50", "price": 120000, "bufferMin": 20 },
+      { "serviceKey": "comuter-1050", "name": "Commuter Line Cibatuan (Ekonomi AC)", "mode": "Commuter Line Cibatuan", "provider": "kai", "operator": "KAI Commuter", "to": "GRT", "toLabel": "Stasiun Garut", "class": "economy", "departure": "10:50", "arrival": "13:05", "price": 20000, "bufferMin": 20 },
+      { "serviceKey": "cikuray-1315", "name": "KA Cikuray (Ekonomi)", "mode": "KA Cikuray", "provider": "kai", "operator": "KAI", "to": "GRT", "toLabel": "Stasiun Garut", "class": "economy", "departure": "13:15", "arrival": "15:20", "price": 45000, "bufferMin": 20 },
+      { "serviceKey": "damri-1445", "name": "Bus DAMRI Bandung-Garut", "mode": "Bus DAMRI", "provider": "bus", "operator": "DAMRI", "to": "TGR", "toLabel": "Terminal Guntur Garut", "class": "bus", "departure": "14:45", "arrival": "17:00", "price": 45000, "bufferMin": 15 },
+      { "serviceKey": "shuttle-1640", "name": "Shuttle Bandung-Garut", "mode": "Shuttle", "provider": "shuttle", "operator": "Shuttle Partner", "to": "POOL", "toLabel": "Pool Garut Kota", "class": "shuttle", "departure": "16:40", "arrival": "18:40", "price": 65000, "bufferMin": 15 }
+    ],
+    "PDL": [
+      { "serviceKey": "comuter-pdl-1005", "name": "Commuter Line Cibatuan (Ekonomi AC)", "mode": "Commuter Line Cibatuan", "provider": "kai", "operator": "KAI Commuter", "to": "GRT", "toLabel": "Stasiun Garut", "class": "economy", "departure": "10:05", "arrival": "12:30", "price": 20000, "bufferMin": 20 },
+      { "serviceKey": "travel-pdl-0800", "name": "Travel Padalarang-Garut (door to door)", "mode": "Travel", "provider": "travel", "operator": "Travel Partner", "to": "GARKOTA", "toLabel": "Garut Kota", "doorToDoor": true, "class": "comfort", "departure": "08:00", "arrival": "10:00", "price": 75000, "bufferMin": 15 }
+    ]
+  }
+}

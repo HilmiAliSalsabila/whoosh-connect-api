@@ -1,0 +1,9 @@
+{
+  "trips": [
+    { "serviceKey": "G1234", "name": "Whoosh G1234", "from": "HLM", "to": "PDL", "departure": "07:00", "arrival": "07:36", "price": 150000, "class": "premium" },
+    { "serviceKey": "G1238", "name": "Whoosh G1238", "from": "HLM", "to": "PDL", "departure": "09:00", "arrival": "09:36", "price": 100000, "class": "economy" },
+    { "serviceKey": "G1242", "name": "Whoosh G1242", "from": "HLM", "to": "PDL", "departure": "11:00", "arrival": "11:36", "price": 150000, "class": "premium" },
+    { "serviceKey": "G1246", "name": "Whoosh G1246", "from": "HLM", "to": "PDL", "departure": "13:00", "arrival": "13:36", "price": 100000, "class": "economy" },
+    { "serviceKey": "G1250", "name": "Whoosh G1250", "from": "HLM", "to": "PDL", "departure": "15:00", "arrival": "15:36", "price": 150000, "class": "premium" }
+  ]
+}

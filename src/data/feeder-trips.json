@@ -1,0 +1,10 @@
+{
+  "note": "Sudah termasuk tiket Whoosh",
+  "feeders": [
+    { "serviceKey": "F-0750", "name": "Feeder Whoosh", "from": "PDL", "to": "BDG", "departure": "07:50", "arrival": "08:20" },
+    { "serviceKey": "F-0950", "name": "Feeder Whoosh", "from": "PDL", "to": "BDG", "departure": "09:50", "arrival": "10:20" },
+    { "serviceKey": "F-1150", "name": "Feeder Whoosh", "from": "PDL", "to": "BDG", "departure": "11:50", "arrival": "12:20" },
+    { "serviceKey": "F-1350", "name": "Feeder Whoosh", "from": "PDL", "to": "BDG", "departure": "13:50", "arrival": "14:20" },
+    { "serviceKey": "F-1550", "name": "Feeder Whoosh", "from": "PDL", "to": "BDG", "departure": "15:50", "arrival": "16:20" }
+  ]
+}

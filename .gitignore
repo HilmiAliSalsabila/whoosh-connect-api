@@ -1,0 +1,18 @@
+node_modules/
+dist/
+coverage/
+*.log
+.env
+.env.*
+!.env.example
+.DS_Store
+.vscode/
+.idea/
+
+# Prisma local db (sqlite) — regenerate via migrate + seed
+prisma/dev.db
+prisma/dev.db-journal
+*.db
+*.db-journal
+.neon
+log.txt

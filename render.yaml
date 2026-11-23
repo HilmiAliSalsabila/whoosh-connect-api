@@ -1,0 +1,22 @@
+# Blueprint Render (free tier) — deploy otomatis dari repo Git.
+# DATABASE_URL diisi manual di dashboard Render (connection string Postgres
+# gratis dari Neon/Supabase). PORT disediakan otomatis oleh Render.
+services:
+  - type: web
+    name: whoosh-connect-api
+    runtime: node
+    plan: free
+    buildCommand: npm ci --include=dev && npx prisma generate && npx prisma migrate deploy && npm run build
+    startCommand: npm run db:seed && node dist/main.js
+    healthCheckPath: /api/routes/stations
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_EXPIRES_IN
+        value: 7d
+      - key: PROVIDER_MODE
+        value: mock
+      - key: SEAT_HOLD_MINUTES
+        value: "10"

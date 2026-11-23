@@ -1,0 +1,23 @@
+{
+  "drops": {
+    "GRT": {
+      "label": "Stasiun Garut",
+      "options": [
+        { "mode": "Taksi", "provider": "taxi", "operator": "Simulasi", "price": 55000, "durationMin": 20 },
+        { "mode": "Ojek", "provider": "taxi", "operator": "Simulasi", "price": 30000, "durationMin": 15 }
+      ]
+    },
+    "TGR": {
+      "label": "Terminal Guntur",
+      "options": [
+        { "mode": "Ojek", "provider": "taxi", "operator": "Simulasi", "price": 50000, "durationMin": 15 }
+      ]
+    },
+    "POOL": {
+      "label": "Pool Garut Kota",
+      "options": [
+        { "mode": "Taksi", "provider": "taxi", "operator": "Simulasi", "price": 40000, "durationMin": 15 }
+      ]
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "stations": [
+    { "id": "HLM", "name": "Halim", "city": "Jakarta" },
+    { "id": "KRW", "name": "Karawang", "city": "Karawang" },
+    { "id": "PDL", "name": "Padalarang", "city": "Bandung Barat" },
+    { "id": "TGL", "name": "Tegalluar", "city": "Bandung" },
+    { "id": "BDG", "name": "Stasiun Bandung", "city": "Bandung", "hub": true },
+    { "id": "GRT", "name": "Stasiun Garut", "city": "Garut" }
+  ]
+}

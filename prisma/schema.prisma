@@ -1,0 +1,79 @@
+// Skema Whoosh Connect — Postgres di Neon (branch production).
+// DATABASE_URL      = pooled (PgBouncer) untuk trafik aplikasi.
+// DATABASE_URL_UNPOOLED = direct, wajib untuk Prisma Migrate (directUrl).
+// Model identik dengan desain PRD bagian 8; dev.db SQLite lama tidak
+// dipakai lagi (tetap ada sebagai cadangan offline).
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DATABASE_URL_UNPOOLED")
+}
+
+model User {
+  id           String    @id @default(uuid())
+  email        String    @unique
+  name         String
+  passwordHash String
+  createdAt    DateTime  @default(now())
+  bookings     Booking[]
+}
+
+model Booking {
+  id             String       @id @default(uuid())
+  userId         String
+  user           User         @relation(fields: [userId], references: [id])
+  routeId        String
+  passengers     Int          @default(1)
+  // pending_payment | processing | confirmed | partially_failed | cancelled | expired
+  status         String
+  totalPrice     Int
+  idempotencyKey String       @unique
+  holdExpiresAt  DateTime?
+  createdAt      DateTime     @default(now())
+  legs           BookingLeg[]
+}
+
+model BookingLeg {
+  id         String     @id @default(uuid())
+  bookingId  String
+  booking    Booking    @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+  provider   String // whoosh | kai | bus | travel | shuttle | feeder | taxi
+  // held | issued | failed | refunded | used
+  status     String
+  ticketCode String?    @unique
+  seat       String?
+  serviceKey String // id layanan di data mentah, mis. "G1242" atau "cikuray-1315"
+  label      String // nama yang tampil di tiket, mis. "KA Cikuray (Ekonomi)"
+  fromLabel  String
+  toLabel    String
+  price      Int
+  departAt   DateTime
+  arriveAt   DateTime
+  seatHolds  SeatHold[]
+}
+
+model SeatHold {
+  id        String     @id @default(uuid())
+  legId     String
+  leg       BookingLeg @relation(fields: [legId], references: [id], onDelete: Cascade)
+  seat      String
+  expiresAt DateTime
+
+  @@index([expiresAt])
+}
+
+model DelayHistory {
+  id           String   @id @default(uuid())
+  provider     String
+  routeKey     String // contoh: HLM-PDL
+  hour         Int
+  delayMinutes Int
+  recordedAt   DateTime @default(now())
+
+  @@index([provider, routeKey])
+}
